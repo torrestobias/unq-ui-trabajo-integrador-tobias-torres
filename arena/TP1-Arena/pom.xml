@@ -49,8 +49,8 @@
         </dependency>
         <dependency>
             <groupId>com.github.unq-ui</groupId>
-            <artifactId>2020s1.i1-medium</artifactId>
-            <version>1.0.0</version>
+            <artifactId>2020s1-i1-medium</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
     </dependencies>
