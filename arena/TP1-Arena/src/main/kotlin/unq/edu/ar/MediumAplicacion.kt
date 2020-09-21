@@ -10,7 +10,8 @@ import unq.edu.ar.windows.LoginWindow
 class MediumAplicacion() : Application() {
 
     override fun createMainWindow(): Window<*> {
-        return LoginWindow(this, LoginAppModel())
+        val modelo = MediumAppModel()
+        return LoginWindow(this, LoginAppModel(),modelo)
     }
 }
 

@@ -1,6 +1,7 @@
 package unq.edu.ar.windows
 
 import org.ui.Author
+import org.ui.MediumSystem
 import org.ui.NotFound
 import org.uqbar.arena.kotlin.extensions.*
 import org.uqbar.arena.widgets.*
@@ -10,9 +11,10 @@ import unq.edu.ar.appModel.LoginAppModel
 import org.uqbar.commons.model.exceptions.UserException
 import org.uqbar.lacar.ui.model.Action
 import unq.edu.ar.appModel.AuthorAppModel
+import unq.edu.ar.appModel.MediumAppModel
 
 
-class LoginWindow (owner: WindowOwner, loginAppModel: LoginAppModel): SimpleWindow<LoginAppModel>(owner,loginAppModel) {
+class LoginWindow (owner: WindowOwner, loginAppModel: LoginAppModel, val mediumAppModel: MediumAppModel): SimpleWindow<LoginAppModel>(owner,loginAppModel) {
     override fun addActions(mainPanel: Panel) {
 
     }
@@ -44,8 +46,9 @@ class LoginWindow (owner: WindowOwner, loginAppModel: LoginAppModel): SimpleWind
             onClick(Action {
                 try {
                      val author : Author = modelObject.login(modelObject.email,modelObject.password)
+
                      thisWindow.close()
-                     AuthorWindow(thisWindow, AuthorAppModel(author)).open()
+                     AuthorWindow(thisWindow, AuthorAppModel(author,mediumAppModel)).open()
                 } catch (e: NotFound) {
                     throw UserException(e.message)
                 }
