@@ -7,6 +7,9 @@ import unq.edu.ar.appModel.AuthorAppModel
 import org.uqbar.arena.kotlin.extensions.*
 import org.uqbar.arena.widgets.Button
 import org.uqbar.arena.widgets.TextBox
+import org.uqbar.commons.model.exceptions.UserException
+import org.uqbar.lacar.ui.model.Action
+import unq.edu.ar.appModel.DraftNoteAppModel
 import unq.edu.ar.appModel.NoteAppModel
 
 class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : SimpleWindow<AuthorAppModel>(owner,authorAppModel) {
@@ -15,14 +18,35 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
             caption = "Add New Note"
         }
 
-        Button(actionsPanel) with {
-            caption = "Edit Note"
+        Button(actionsPanel) with { caption = "Edit Note";
+            onClick(Action {
+                if (modelObject.selectNote == null){
+                    throw UserException("Por favor, selecciona una nota")
+                }
+
+                val note = DraftNoteAppModel(modelObject.selectNote!!)
+                val view = EditNoteWindow(thisWindow, note)
+                view.onAccept {
+                        modelObject.editNote(modelObject.selectNote!!.id,note)
+                }
+                view.open()
+
+            })
         }
 
         Button(actionsPanel) with {
             caption = "Delete Note"
+            onClick {
+                if(modelObject.selectNote == null){
+                    throw UserException("Please, select a note")
+                }
+                val deleteNoteWindow = DeleteNoteWindow(thisWindow, modelObject.selectNote!!)
+                deleteNoteWindow.onAccept {
+                    modelObject.removeNote(modelObject.selectNote!!.id)
+                }
+                deleteNoteWindow.open()
+            }
         }
-
 
     }
 
@@ -53,7 +77,7 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
             column {
                 title = "Title"
                 bindContentsTo("title")
-                fixedSize = 450
+                fixedSize = 250
             }
 
         }

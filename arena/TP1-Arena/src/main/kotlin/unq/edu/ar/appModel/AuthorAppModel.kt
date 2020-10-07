@@ -1,10 +1,12 @@
 package unq.edu.ar.appModel
 
 import org.ui.Author
+import org.ui.DraftNote
+import org.ui.MediumSystem
 import org.uqbar.commons.model.annotations.Observable
 
 @Observable
-class AuthorAppModel(author: Author, val mediumAppModel: MediumAppModel) {
+class AuthorAppModel(author: Author, val system : MediumSystem) {
 
     var id : String = author.id
     var name : String = author.name
@@ -15,9 +17,20 @@ class AuthorAppModel(author: Author, val mediumAppModel: MediumAppModel) {
     var photo : String = author.photo
 
     fun allNotes() : MutableList<NoteAppModel>{
-        var notasDeUser = mediumAppModel.mediumSystem.searchNotesByAuthorId(id).map { NoteAppModel(it.id, it.title, it.categories, it.body, it.author) }.toMutableList()
+        var notasDeUser = system.searchNotesByAuthorId(id).map { NoteAppModel(it.id, it.title, it.categories.toString(), it.body) }.toMutableList()
         return notasDeUser
     }
+
+    fun editNote(noteId : String, note : DraftNoteAppModel){
+        system.editNote(noteId, DraftNote(note.title,note.body,note.categories))
+        notes = allNotes();
+    }
+
+    fun removeNote(noteId : String){
+        system.removeNote(noteId)
+        notes = allNotes()
+    }
+
 
     
 }
