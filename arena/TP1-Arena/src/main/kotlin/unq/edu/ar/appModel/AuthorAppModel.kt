@@ -3,6 +3,7 @@ package unq.edu.ar.appModel
 import org.ui.Author
 import org.ui.DraftNote
 import org.ui.MediumSystem
+import org.ui.bootstrap.titles
 import org.uqbar.commons.model.annotations.Observable
 
 @Observable
@@ -15,6 +16,8 @@ class AuthorAppModel(author: Author, val system : MediumSystem) {
     var notes = allNotes()
     var selectNote : NoteAppModel? = null
     var photo : String = author.photo
+    var search : String = ""
+    var notesDuplicates = allNotes()
 
     fun allNotes() : MutableList<NoteAppModel>{
         var notasDeUser = system.searchNotesByAuthorId(id).map { NoteAppModel(it.id, it.title, it.categories.toString(), it.body) }.toMutableList()
@@ -31,6 +34,18 @@ class AuthorAppModel(author: Author, val system : MediumSystem) {
         notes = allNotes()
     }
 
+    fun addNote(note: DraftNoteAppModel){
+        system.addNote(id, DraftNote(note.title, note.body, note.categories))
+        notes = allNotes()
+    }
 
-    
+   fun filterByTitle(){
+        notes = allNotes().filter { it.title.contains(search) }.toMutableList()
+   }
+
+    fun resetPost() {
+        this.notes = notesDuplicates
+    }
+
+
 }

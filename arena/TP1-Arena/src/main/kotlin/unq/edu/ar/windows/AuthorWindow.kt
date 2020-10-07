@@ -16,6 +16,14 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
     override fun addActions(actionsPanel: Panel?) {
         Button(actionsPanel) with {
             caption = "Add New Note"
+            onClick {
+                val note = DraftNoteAppModel()
+                val view = AddNoteWindow(thisWindow,note)
+                view.onAccept {
+                    modelObject.addNote(note)
+                }
+                view.open()
+            }
         }
 
         Button(actionsPanel) with { caption = "Edit Note";
@@ -59,7 +67,14 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
             Button(mainPanel) with {
                 caption = "Search"
                 width = 20
+                onClick(Action { modelObject.filterByTitle() })
+            }
 
+            Button(mainPanel) with {
+                caption = "Back"
+                onClick(Action {
+                    modelObject.resetPost()
+                })
             }
         }
 
