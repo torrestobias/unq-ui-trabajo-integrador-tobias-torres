@@ -19,6 +19,7 @@ class LoginWindow (owner: WindowOwner, loginAppModel: LoginAppModel): SimpleWind
 
     override fun createFormPanel(mainPanel: Panel) {
         title = "Medium"
+        iconImage = "medium-52-461817.png"
 
         Label(mainPanel) with {
             text = "Email"

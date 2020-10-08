@@ -14,6 +14,7 @@ class DeleteNoteWindow (owner: WindowOwner, model: NoteAppModel): Dialog<NoteApp
     override fun createFormPanel(mainPanel: Panel?) {
         Label(mainPanel) with {
             text = "Do you remove '${modelObject.title}' ?"
+            iconImage = "medium-52-461817.png"
         }
 
         Button(mainPanel) with {

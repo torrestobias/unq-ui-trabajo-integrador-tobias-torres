@@ -60,6 +60,7 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
 
     override fun createFormPanel(mainPanel: Panel) {
         title = "Author View"
+        iconImage = "medium-52-461817.png"
 
         TextBox(mainPanel) with {
             width= 20
@@ -69,13 +70,14 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
                 width = 20
                 onClick(Action { modelObject.filterByTitle() })
             }
-
+/*
             Button(mainPanel) with {
                 caption = "Back"
                 onClick(Action {
                     modelObject.resetPost()
                 })
             }
+            */
         }
 
         table<NoteAppModel>(mainPanel){

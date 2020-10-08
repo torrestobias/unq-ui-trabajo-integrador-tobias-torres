@@ -28,6 +28,7 @@ class EditNoteWindow(owner: WindowOwner, draftNoteAppModel: DraftNoteAppModel): 
 
     override fun createFormPanel(mainPanel: Panel?) {
         title = "Edit Note Window"
+        iconImage = "medium-52-461817.png"
         Label(mainPanel) with {
             bindTo("title")
         }
