@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10291a5a-cf7c-4587-bbda-01924b15e0e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Hello.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Hello.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../arena/TP1-Arena" />
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="TP2-API" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="unq.edu.ar.HelloKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.HelloKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,7 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602097475475</updated>
       <workItem from="1602097479431" duration="2171000" />
-      <workItem from="1602134243904" duration="552000" />
+      <workItem from="1602134243904" duration="1233000" />
+      <workItem from="1602198420625" duration="4413000" />
     </task>
     <servers />
   </component>
@@ -48,25 +68,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602106924845">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602212680326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602106924845" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1602134814317">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602212680326" />
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom" timestamp="1602199562025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602134814317" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1602134814317">
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602199562025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.center" timestamp="1602199562025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602134814317" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1602134814317">
+    <state width="1323" height="225" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602199562025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.left" timestamp="1602199562025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602134814317" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1602134814317">
+    <state width="1323" height="225" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602199562025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.right" timestamp="1602199562025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602134814317" />
+    <state width="1323" height="225" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602199562025" />
   </component>
 </project>
