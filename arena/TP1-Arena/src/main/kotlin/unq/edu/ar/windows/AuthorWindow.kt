@@ -62,24 +62,6 @@ class AuthorWindow (owner: WindowOwner, authorAppModel : AuthorAppModel) : Simpl
         title = "Author View"
         iconImage = "medium-52-461817.png"
 
-        TextBox(mainPanel) with {
-            width= 20
-
-            Button(mainPanel) with {
-                caption = "Search"
-                width = 20
-                onClick(Action { modelObject.filterByTitle() })
-            }
-/*
-            Button(mainPanel) with {
-                caption = "Back"
-                onClick(Action {
-                    modelObject.resetPost()
-                })
-            }
-            */
-        }
-
         table<NoteAppModel>(mainPanel){
             bindItemsTo("notes")
             bindSelectionTo("selectNote")
