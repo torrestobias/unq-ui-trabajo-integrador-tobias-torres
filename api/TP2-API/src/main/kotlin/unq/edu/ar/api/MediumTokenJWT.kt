@@ -1,4 +1,4 @@
-package unq.edu.ar.api.controller
+package unq.edu.ar.api
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm

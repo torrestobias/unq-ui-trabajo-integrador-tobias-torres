@@ -2,6 +2,7 @@ package unq.edu.ar.api.controller
 
 import io.javalin.http.Context
 import org.ui.MediumSystem
+import unq.edu.ar.api.MediumTokenJWT
 import unq.edu.ar.model.AuthorDoesNotExistException
 import unq.edu.ar.model.Medium
 

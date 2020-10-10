@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10291a5a-cf7c-4587-bbda-01924b15e0e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Hello.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/TP2-API.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/TP2-API.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/controller/AuthorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/controller/AuthorController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/controller/MediumTokenJWT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/MediumTokenJWT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/model/Medium.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/model/Medium.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -36,6 +38,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../unqflix" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tobia\Desktop\unq-ui-trabajo-integrador-tobias-torres\api\TP2-API\src\main\kotlin\unq\edu\ar\api" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
@@ -71,7 +78,7 @@
       <workItem from="1602134243904" duration="1233000" />
       <workItem from="1602198420625" duration="10500000" />
       <workItem from="1602291010231" duration="6927000" />
-      <workItem from="1602304283443" duration="1969000" />
+      <workItem from="1602304283443" duration="5145000" />
     </task>
     <servers />
   </component>
@@ -79,10 +86,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1602300540655">
+    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1602308728771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602300540655" />
+    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602308728771" />
     <state x="413" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602305055962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -91,21 +98,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602297908843" />
-    <state width="1323" height="225" key="GridCell.Tab.0.bottom" timestamp="1602225958687">
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom" timestamp="1602311234141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="225" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602225958687" />
-    <state width="1323" height="225" key="GridCell.Tab.0.center" timestamp="1602225958687">
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602311234141" />
+    <state width="1323" height="225" key="GridCell.Tab.0.center" timestamp="1602311234141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="225" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602225958687" />
-    <state width="1323" height="225" key="GridCell.Tab.0.left" timestamp="1602225958687">
+    <state width="1323" height="225" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602311234141" />
+    <state width="1323" height="225" key="GridCell.Tab.0.left" timestamp="1602311234141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="225" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602225958687" />
-    <state width="1323" height="225" key="GridCell.Tab.0.right" timestamp="1602225958687">
+    <state width="1323" height="225" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602311234141" />
+    <state width="1323" height="225" key="GridCell.Tab.0.right" timestamp="1602311234141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="225" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602225958687" />
+    <state width="1323" height="225" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602311234141" />
   </component>
 </project>
