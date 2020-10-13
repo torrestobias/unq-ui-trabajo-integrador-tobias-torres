@@ -1,11 +1,11 @@
-package unq.edu.ar.api
+package unq.edu.ar.api.token
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import javalinjwt.JWTGenerator
 import javalinjwt.JWTProvider
 import org.ui.Author
-import unq.edu.ar.api.TokenNotFound
+import unq.edu.ar.api.exception.TokenNotFound
 
 class AuthorGenerator : JWTGenerator<Author> {
     override fun generate(author: Author, algorithm: Algorithm): String {

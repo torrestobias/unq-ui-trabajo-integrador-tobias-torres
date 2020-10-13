@@ -1,4 +1,4 @@
-package unq.edu.ar.api
+package unq.edu.ar.api.exception
 
 import kotlin.Exception
 

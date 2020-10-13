@@ -1,4 +1,4 @@
-package unq.edu.ar.api
+package unq.edu.ar.api.main
 
 import io.javalin.core.security.AccessManager
 import io.javalin.core.security.Role
@@ -6,11 +6,13 @@ import io.javalin.http.Context
 import io.javalin.http.Handler
 import io.javalin.http.UnauthorizedResponse
 import org.ui.Author
-import unq.edu.ar.Roles
-import unq.edu.ar.model.AuthorDoesNotExistException
-import unq.edu.ar.model.Medium
+import org.ui.MediumSystem
+import org.ui.NotFound
+import unq.edu.ar.api.exception.TokenNotFound
+import unq.edu.ar.api.token.MediumTokenJWT
 
-class MediumAccessManager (val tokenJWT: MediumTokenJWT, val medium : Medium) : AccessManager {
+
+class MediumAccessManager (val tokenJWT: MediumTokenJWT, val medium : MediumSystem) : AccessManager {
     override fun manage(handler: Handler, ctx: Context, roles: MutableSet<Role>) {
         val token = ctx.header("Authorization")
         when {
@@ -28,10 +30,10 @@ class MediumAccessManager (val tokenJWT: MediumTokenJWT, val medium : Medium) : 
     fun getAuthor(token : String): Author {
         try {
             val authorId = tokenJWT.validate(token)
-            return medium.getAuthorById(authorId)
+            return medium.getAuthor(authorId)
         }catch (e: TokenNotFound){
             throw UnauthorizedResponse("Token not found")
-        }catch (e : AuthorDoesNotExistException){
+        }catch (e : NotFound){
             throw UnauthorizedResponse("Invalid Token")
         }
     }
