@@ -22,7 +22,7 @@ data class NoteMapper(val id : String,
                       val body : String,
                       val categories : List<String>,
                       val author : AuthorMapper,
-                      val comments : MutableList<Comment> )
+                      val comments : MutableList<Comment>)
 
 data class AuthorMapper(val id: String?, val name : String?)
 
