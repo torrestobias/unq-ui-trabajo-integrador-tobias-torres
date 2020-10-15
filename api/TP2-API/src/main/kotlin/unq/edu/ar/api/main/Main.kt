@@ -50,7 +50,9 @@ fun main(args: Array<String>) {
         }
         path("content"){
             get(contentController::getLatestContent,mutableSetOf<Role>(Roles.AUTHOR))
+            path(":id"){
+                get(contentController::getContentById,mutableSetOf<Role>(Roles.AUTHOR))
+            }
         }
-
     }
 }
