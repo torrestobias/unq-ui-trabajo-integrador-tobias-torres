@@ -1,6 +1,5 @@
 package unq.edu.ar.api.mapper
 
-import org.ui.Author
 import org.ui.Comment
 import org.ui.Note
 
@@ -18,13 +17,13 @@ data class AuthorInformation(val name:String?,
 
 data class NotesOfUser(val notes: List<Note>)
 
-data class LatestNoteMapper(val id : String,
-                            val title : String,
-                            val body : String,
-                            val categories : List<String>,
-                            val author : AuthorMapper,
-                            val comments : MutableList<Comment> )
+data class NoteMapper(val id : String,
+                      val title : String,
+                      val body : String,
+                      val categories : List<String>,
+                      val author : AuthorMapper,
+                      val comments : MutableList<Comment> )
 
 data class AuthorMapper(val id: String?, val name : String?)
 
-data class LatestContentMapper(val latestContent : List<LatestNoteMapper>)
+data class LatestContentMapper(val latestContent : List<NoteMapper>)

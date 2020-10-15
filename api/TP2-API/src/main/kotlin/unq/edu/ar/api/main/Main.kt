@@ -52,6 +52,16 @@ fun main(args: Array<String>) {
             get(contentController::getLatestContent,mutableSetOf<Role>(Roles.AUTHOR))
             path(":id"){
                 get(contentController::getContentById,mutableSetOf<Role>(Roles.AUTHOR))
+                post(contentController::addCommentNote,mutableSetOf<Role>(Roles.AUTHOR))
+            }
+        }
+
+        path("search"){
+            get(contentController::searchNote,mutableSetOf<Role>(Roles.AUTHOR))
+        }
+        path("category"){
+            path(":name"){
+                get(contentController::notesByCategory,mutableSetOf<Role>(Roles.AUTHOR))
             }
         }
     }

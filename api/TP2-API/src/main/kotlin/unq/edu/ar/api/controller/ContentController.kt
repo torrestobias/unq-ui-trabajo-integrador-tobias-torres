@@ -1,18 +1,19 @@
 package unq.edu.ar.api.controller
 
+import io.javalin.http.BadRequestResponse
 import io.javalin.http.Context
 import org.ui.MediumSystem
 import org.ui.NotFound
 import unq.edu.ar.api.mapper.AuthorMapper
 import unq.edu.ar.api.mapper.LatestContentMapper
-import unq.edu.ar.api.mapper.LatestNoteMapper
+import unq.edu.ar.api.mapper.NoteMapper
 import unq.edu.ar.api.token.MediumTokenJWT
 
 class ContentController (private val mediumSystem: MediumSystem, private val tokenJWT: MediumTokenJWT) {
 
     fun getLatestContent(ctx : Context){
        val latestContent = mediumSystem.latestAddedNotes().map {
-           LatestNoteMapper(it.id,it.title,it.body,it.categories, AuthorMapper(it.author.id,it.author.name),it.comments)
+           NoteMapper(it.id,it.title,it.body,it.categories, AuthorMapper(it.author.id,it.author.name),it.comments)
        }
        ctx.status(200)
        ctx.json(
@@ -21,13 +22,13 @@ class ContentController (private val mediumSystem: MediumSystem, private val tok
     }
 
     fun getContentById(ctx: Context){
-        val noteId = ctx.pathParam("noteId")
+        val noteId = ctx.pathParam("id")
             try {
                 val note = mediumSystem.getNote(noteId)
                 val authorNote = mediumSystem.getAuthor(note.author.id)
                 ctx.status(200)
                 ctx.json(
-                    LatestNoteMapper(note.id,note.title,note.body,note.categories,AuthorMapper(authorNote.id,authorNote.name),note.comments)
+                    NoteMapper(note.id,note.title,note.body,note.categories,AuthorMapper(authorNote.id,authorNote.name),note.comments)
                 )
             }catch (e : NotFound){
                 ctx.status(404)
@@ -38,5 +39,35 @@ class ContentController (private val mediumSystem: MediumSystem, private val tok
                     )
                 )
             }
+    }
+
+    fun addCommentNote(ctx: Context){
+    //
+    }
+
+    fun searchNote(ctx: Context){
+        val textToSearch = ctx.queryParam("text") ?: throw BadRequestResponse("Invalid query - param text is null")
+        val searchResults = mediumSystem.searchNotesByTitle(textToSearch).map {
+            NoteMapper(it.id,it.title,it.body,it.categories, AuthorMapper(it.author.id,it.author.name),it.comments)
+        }
+        ctx.status(200)
+        ctx.json(
+            mapOf(
+                "Notes" to searchResults
+            )
+        )
+    }
+
+    fun notesByCategory(ctx: Context){
+        val nameOfCategory = ctx.pathParam("name")
+        val searchResults = mediumSystem.searchNotesByCategory(nameOfCategory).map {
+            NoteMapper(it.id,it.title,it.body,it.categories, AuthorMapper(it.author.id,it.author.name),it.comments)
+        }
+        ctx.status(200)
+        ctx.json(
+            mapOf(
+                "Categories" to searchResults
+            )
+        )
     }
 }
