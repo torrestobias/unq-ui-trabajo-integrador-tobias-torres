@@ -2,6 +2,7 @@ package unq.edu.ar.api.controller
 
 import io.javalin.http.Context
 import org.ui.MediumSystem
+import org.ui.NotFound
 import unq.edu.ar.api.mapper.AuthorMapper
 import unq.edu.ar.api.mapper.LatestContentMapper
 import unq.edu.ar.api.mapper.LatestNoteMapper
@@ -20,7 +21,22 @@ class ContentController (private val mediumSystem: MediumSystem, private val tok
     }
 
     fun getContentById(ctx: Context){
-        val idContent = ctx.pathParam("contentId")
-
+        val noteId = ctx.pathParam("noteId")
+            try {
+                val note = mediumSystem.getNote(noteId)
+                val authorNote = mediumSystem.getAuthor(note.author.id)
+                ctx.status(200)
+                ctx.json(
+                    LatestNoteMapper(note.id,note.title,note.body,note.categories,AuthorMapper(authorNote.id,authorNote.name),note.comments)
+                )
+            }catch (e : NotFound){
+                ctx.status(404)
+                ctx.json(
+                    mapOf(
+                        "result" to "error",
+                        "message" to e.message
+                    )
+                )
+            }
     }
 }
