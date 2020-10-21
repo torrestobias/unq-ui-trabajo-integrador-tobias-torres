@@ -49,9 +49,9 @@ fun main(args: Array<String>) {
             }
         }
         path("content"){
-            get(contentController::getLatestContent,mutableSetOf<Role>(Roles.AUTHOR))
+            get(contentController::getLatestContent,mutableSetOf<Role>(Roles.ANYONE))
             path(":id"){
-                get(contentController::getContentById,mutableSetOf<Role>(Roles.AUTHOR))
+                get(contentController::getContentById,mutableSetOf<Role>(Roles.ANYONE))
                 post(contentController::addCommentNote,mutableSetOf<Role>(Roles.AUTHOR))
             }
         }

@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="10291a5a-cf7c-4587-bbda-01924b15e0e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/main/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/tp-medium-integrador/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/tp-medium-integrador/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/tp-medium-integrador/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/tp-medium-integrador/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/tp-medium-integrador/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/unq/edu/ar/api/main" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/2020s1-Grupo11-Mayonesa-master/2020s1-Grupo11-Mayonesa-master/api" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -97,6 +105,15 @@
       <workItem from="1602702880630" duration="2546000" />
       <workItem from="1602718575439" duration="17842000" />
       <workItem from="1602789796790" duration="5962000" />
+      <workItem from="1602799347727" duration="1058000" />
+      <workItem from="1602893556871" duration="2180000" />
+      <workItem from="1602968459145" duration="65000" />
+      <workItem from="1602973807837" duration="1688000" />
+      <workItem from="1602976260125" duration="126000" />
+      <workItem from="1602983424814" duration="846000" />
+      <workItem from="1603217442044" duration="1669000" />
+      <workItem from="1603221760137" duration="40000" />
+      <workItem from="1603235353807" duration="9462000" />
     </task>
     <servers />
   </component>
@@ -120,26 +137,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="28" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602530084317" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602530045762">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603245401685">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602530045762" />
-    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1602798536880">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603245401685" />
+    <state width="1323" height="185" key="GridCell.Tab.0.bottom" timestamp="1603253850603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602798536880" />
-    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1602798536880">
+    <state width="1323" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603253850603" />
+    <state width="1323" height="185" key="GridCell.Tab.0.center" timestamp="1603253850603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602798536880" />
-    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1602798536880">
+    <state width="1323" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603253850603" />
+    <state width="1323" height="185" key="GridCell.Tab.0.left" timestamp="1603253850603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602798536880" />
-    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1602798536880">
+    <state width="1323" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603253850603" />
+    <state width="1323" height="185" key="GridCell.Tab.0.right" timestamp="1603253850603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602798536880" />
+    <state width="1323" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603253850603" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1602974477393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1602974477393" />
     <state x="274" y="59" key="new project wizard" timestamp="1602619350961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
