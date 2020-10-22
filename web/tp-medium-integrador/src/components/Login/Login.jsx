@@ -17,8 +17,7 @@ function Login(){
 
     function getUser(){
         axios.get("http://localhost:7000/user").then(success=>{
-            localStorage.setItem('imageLink', success.data.photo);
-            localStorage.setItem('userName', success.data.name);
+            localStorage.setItem('author', success.data.name);
         }).catch(error => {
             console.log("error get user", error.response);
         });
@@ -35,7 +34,7 @@ function Login(){
         .then(success =>{
                 console.log("success", success);
                 localStorage.setItem('tokenValido', success.headers.authorization);
-                axios.defaults.headers['authorizathion'] = localStorage.getItem('tokenValido')
+                axios.defaults.headers['authorization'] = localStorage.getItem('tokenValido')
                 getUser();
                 goHome();
             }

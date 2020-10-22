@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import SummaryNote from "../StickyNote/SummaryNote";
 
 function Home(){
     const [lastestNotes, setLatestNotes] = useState ([]);
@@ -21,9 +22,9 @@ function Home(){
 
     return (
         <div className="container">
-          <h1>Ultimos agregados :</h1>
+          <h1>Ultimos agregados</h1>
             {lastestNotes.map(note => (
-                <p>{"Titulo: "+ note.title+"- Author: "+note.author.name+"- Categorias: "+note.categories}</p>
+            <SummaryNote key={note.id} note={note}/>
             )
             )}
         </div>

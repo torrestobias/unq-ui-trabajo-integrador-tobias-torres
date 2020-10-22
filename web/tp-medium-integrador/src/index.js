@@ -5,6 +5,8 @@ import * as serviceWorker from './serviceWorker';
 import Routes from './routes/route';
 import Home from './components/Home/home';
 import { Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
