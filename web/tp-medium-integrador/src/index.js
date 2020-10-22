@@ -4,10 +4,11 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Routes from './routes/route';
 import Home from './components/Home/home';
+import { Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
