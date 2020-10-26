@@ -46,7 +46,7 @@ class AuthorController ( private val mediumSystem: MediumSystem, private val tok
             val newAuthor = ctx.bodyValidator<AuthorRegisterMapper>()
                 .check(
                     {
-                        it.name != null && it.email != null && it.password != null && it.photo != null
+                        it.name!!.isNotBlank() && it.email!!.isNotBlank() && it.password!!.isNotBlank() && it.photo!!.isNotBlank()
                     },
                     "Invalid Body: Please Complete all fields"
                 )
