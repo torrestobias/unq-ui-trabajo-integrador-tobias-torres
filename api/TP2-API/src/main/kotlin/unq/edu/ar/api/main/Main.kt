@@ -57,11 +57,11 @@ fun main(args: Array<String>) {
         }
 
         path("search"){
-            get(contentController::searchNote,mutableSetOf<Role>(Roles.AUTHOR))
+            get(contentController::searchNote,mutableSetOf<Role>(Roles.ANYONE))
         }
         path("category"){
             path(":name"){
-                get(contentController::notesByCategory,mutableSetOf<Role>(Roles.AUTHOR))
+                get(contentController::notesByCategory,mutableSetOf<Role>(Roles.ANYONE))
             }
         }
     }

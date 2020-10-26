@@ -1,6 +1,8 @@
 import axios from "axios";
 import React,{ useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import "../../styles/login.css";
+import Notifications, {notify} from 'react-notify-toast';
 
 
 function Login(){
@@ -10,6 +12,7 @@ function Login(){
     const updatePassword = ev => setPassword(ev.target.value);
 
     let history = useHistory();
+    let myColor = { background: '#0E1717', text: "#FFFFFF" };
 
     function goHome(){
         history.push("/");
@@ -21,7 +24,6 @@ function Login(){
         }).catch(error => {
             console.log("error get user", error.response);
         });
-
     }
 
     function signIn(ev){
@@ -40,9 +42,9 @@ function Login(){
             }
         )
         .catch(error => {
-            console.log("login error", error.response.data.title)
-            const errorLabel = error.response.data.title;
-
+            console.log("login error", error.response.data.title);
+            const errorLabel = error.response.data.message;
+            notify.show(errorLabel, "warning", 5000, myColor);        
         });
     }
 
@@ -50,6 +52,7 @@ function Login(){
 
     return (
         <form className="signInForm">
+            <Notifications/>
             <input className="inp" type="text" placeholder="Username" name="uname"
                    value={email}
                    onChange={updateEmail}
